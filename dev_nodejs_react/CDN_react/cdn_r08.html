@@ -1,0 +1,63 @@
+<!-- 20250609 react 시작 !!!!! 먼저 쉬운 CDN 부터! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react@18/umd/react.production.min.js">
+    </script>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js">
+    </script>
+    <script src = "https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id ="root"></div>
+    <script type ="text/babel">
+        const Score = (props) => (
+            // <h2>점수 : {props.porint} 점? `합격 ${props.point}` : `불합격${}`</h2>
+            <h2>
+                점수 : {" "}
+                {props.point >= 60 
+                ? `합격입니다! 🤩 (${props.point})` 
+                : `불합격입니다.. 😣 (${props.point})`}
+            </h2>
+        );
+
+        const Score2 = ({point}) => ( //props 없어도 실행됨 !!
+            <h2>
+                점수 : {" "}
+                {point >= 60 
+                ? `합격입니다! 🤩 (${point})` 
+                : `불합격입니다.. 😣 (${point})`}
+            </h2>
+        );
+
+        const App = () => {
+            return (
+                <>
+                <Score point = {55}/>
+                <Score point = {66}/>
+                <Score point = {88}/>
+                <Score point = {18}/>
+                <Score point = {38}/>
+                <Score point = {77}/>
+                <hr/>
+                <Score2 point = {55}/>
+                <Score2 point = {66}/>
+                <Score2 point = {88}/>
+                <Score2 point = {18}/>
+                <Score2 point = {38}/>
+                <Score2 point = {77}/>
+                </>
+            );
+        };
+
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: rgb(178, 237, 100);
+            color: white;
+            padding: 10px;
+            border: none;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 5px 5px 5px #ccc;
+        }
+
+    </style>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react@18/umd/react.production.min.js">
+    </script>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js">
+    </script>
+    <script src = "https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id ="root"></div>
+    <script type ="text/babel">
+
+        const Header = () => {
+            return (
+                // 굳이 div 안쓰고 그냥 꺽쇠로만 표현해도 된대!!! ㅇ0ㅇ
+            <h1>헤더입니다. 저는 Header를 담당해요 !!</h1>
+            );
+        };
+
+        const Content = () => {
+            const name = "시메틱레이아웃";
+            const cont = "Content";
+            const btn1 = "안녕하세요 !"
+            const btn2 = "반~가워~요~ ^_^";
+            return (
+            <>
+                <hr />
+                <h2>리액트로 {name}을 구성중인데요 !! 저는 {cont}를 담당해요~</h2>
+                <hr />
+                <button onClick = {(e) => alert(e.target.textContent)}>{btn1}</button>
+                <button onClick = {(e) => alert(e.target.textContent)}>{btn2}</button>
+            </>
+            );
+        };
+
+        const Footer = () => <h2>저는 Footer를 담당해요 !!</h2>;
+
+        ReactDOM.createRoot(
+            document.getElementById("root")).render([
+                <Header/>,
+                <Content />,
+                <Footer />
+            ]);
+    </script>
+</body>
+</html>

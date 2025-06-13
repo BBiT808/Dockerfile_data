@@ -1,0 +1,22 @@
+.ex7-div {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(221, 255, 182, 0.507);
+}
+
+.ex7-div:hover {
+    transform: scale(0.8);
+    background-color: rgb(255, 229, 196);
+}
+
+.ex7-div~ul li {
+    background-color: lightskyblue;
+}
+
+.ex7ex7 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 242, 0.151);
+}

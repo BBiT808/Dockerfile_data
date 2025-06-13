@@ -1,0 +1,10 @@
+.ex7-div {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(255, 182, 193, 0.459);
+}
+
+.ex7-div ul li {
+    background-color: lightskyblue;
+}

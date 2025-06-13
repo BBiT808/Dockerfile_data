@@ -1,0 +1,111 @@
+<!-- 20250609 react 시작 !!!!! 먼저 쉬운 CDN 부터! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 목록 !!</title>
+    <style>
+    .board_wrap {
+        width : 80%;
+        margin : 40% auto;
+    }
+    .board_title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .board_list {
+        width: 100%;
+        border-top: 2px solid #c0f56a;
+    }
+    .board_list div {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .board_list .header {
+        background-color: #e5ffba;
+        font-weight: bold;
+    }
+    .board_list .row {
+        background-color: white;
+    }
+    .board_list .row:nth-child(even) {
+        background-color: rgba(241, 255, 204, 0.705);
+    }
+    </style>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react@18/umd/react.production.min.js">
+    </script>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js">
+    </script>
+    <script src = "https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id ="root"></div>
+    <script src = "./cdn_r09.js"></script>
+    <script type ="text/babel">
+
+        // const ListItem =() => {
+        //     return (
+        //         <>
+        //         <div class="row">
+        //             <div>1</div>
+        //             <div>제목틀</div>
+        //             <div>홍길동</div>
+        //             <div>2021</div>
+        //             <div>77</div>
+        //         </div>
+        //         </>
+        //     );
+        // };
+        const ListItem =() => {
+            return (
+                <>
+                {users.map((v) => {
+                    return (
+                        <div className="row" key = {v.id}>
+                            {/* key는 리액트가 각 요소를 식별하는데 사용되는 고유한 값 */}
+                            {/* key는 배열의 각 요소에 대해 고유해야 함 */}
+                            <div>{v.id}</div>
+                            <div>{v.title}</div>
+                            <div>{v.name}</div>
+                            <div>{v.date}</div>
+                            <div>{v.count}</div>
+                        </div>
+                    );
+                })}
+                {/* users 배열을 map 함수로 순회하여 각 요소를 렌더링 */}
+                {/* map 함수는 배열의 각 요소에 대해 함수를 실행하고, 그 결과를 새로운 배열로 반환 */}
+                {/* 여기서는 각 요소를 div로 감싸서 렌더링 */}
+                </>
+                );
+             };
+
+        const List =() => {
+            return (
+                <div className="board_wrap">
+                    <div className="board_title">
+                        <h1>🍀 게시글 목록 🍀</h1>
+                    </div>
+                    <div className="board_list">
+                        <div className="header">
+                            <div>번호</div>
+                            <div>제목</div>
+                            <div>작성자</div>
+                            <div>작성일</div>
+                            <div>조회수</div>
+                        </div>
+                        <ListItem />
+                        </div>
+                    </div>
+            );
+        };
+
+        ReactDOM.createRoot(document.getElementById("root")).render(<List />);
+    </script>
+</body>
+</html>
