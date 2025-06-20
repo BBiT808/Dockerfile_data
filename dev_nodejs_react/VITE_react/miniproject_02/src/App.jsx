@@ -10,23 +10,19 @@ import Write from './pages/Write'
 import View from './pages/View'
 import Mypage from './pages/Mypage'
 import Update from './pages/Update'
+import CheckMyPage from './pages/CheckMypage'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Logout from './pages/Logout'
 
 function App() {
   return (
     <>
-    <div className="info_container">
-      <Link to="/">홈</Link> | {" "}
-      <Link to="/Login">로그인</Link> | {" "}
-      <Link to="/Mypage">마이 페이지</Link>
-    </div>
+      <Header />
       <nav>
-
         <Link to="/">최저가 물건 찾기</Link>
         <Link to="/Data">통계</Link>
         <Link to="/Board">게시판</Link>
-
-        <Link to="/Write">작성창</Link>
-        <Link to="/View">뷰어</Link>
       </nav>
 
       <Routes>
@@ -39,11 +35,11 @@ function App() {
         <Route path="/View" element={<View />} />
         <Route path="/Write" element={<Write />} />
         <Route path="/Mypage" element={<Mypage />} />
-      </Routes>
+        <Route path="/CheckMypage" element={<CheckMyPage />} />
+        <Route path="/Logout" element={<Logout />} />
 
-      <footer style={{textAlign: 'center', padding: '1rem', color: '#888'}}>
-        COPYRIGHTS @ 2025 Miniproject02 - Team01 , All rights reserved.
-      </footer>
+      </Routes>
+      <Footer/>
     </>
   );
 }
