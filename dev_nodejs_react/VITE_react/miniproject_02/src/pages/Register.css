@@ -1,27 +1,11 @@
-* {
-  box-sizing: border-box;
-}
-
-body .body-wrapper {
-  width: 100vw;
-  height: 52%;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  
-}
-
-p {
-  text-align: center;
-}
-
 .container {
   background-color: #fff;
   padding: 30px;
   border-radius: 1rem;
   box-shadow: 0 1px 40px #ccc;
   max-width: 500px;
-  width: 100%;
+  width: 33%;
+  /* height: 700px; */
 }
 
 .container h2 {
@@ -38,7 +22,7 @@ label {
 }
 
 input {
-  width: 10px;
+  width: 100%;
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -67,7 +51,7 @@ button {
 }
 
 button:hover {
-  background-color: #ffddf8;
+  background-color: #c9d7ff;
 }
 
 form {
@@ -90,19 +74,21 @@ form {
 
 .input-with-button {
   display: flex;
-  gap: 10px; /* 간격 주기 */
-  align-items: center;
+  gap: 10px; 
+  align-items: stretch;
   margin-bottom: 20px;
 }
 
 .input-with-button .form-floating {
   flex: 1;
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
+
 .duplicate-check-btn {
   width: auto;
-  min-width: 90px;
-  padding: 1rem 16px;
+  min-width: 80px;
+  padding: 10px;
+  text-align: center;
   background-color: #6b97d1;
   color: white;
   font-weight: bold;
@@ -113,9 +99,15 @@ form {
   margin: 0;
   height: 58px;
   white-space: nowrap;
-  flex-shrink: 0;
+  align-self: flex-end;
+  margin: 0 0 0 10px;
 }
 
 .duplicate-check-btn:hover {
   background-color: #5a86c0;
+  
+}
+
+.form-floating {
+  display: flex;
 }

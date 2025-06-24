@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { useAuth } from "../contexts/AuthContext";
 import "./Login.css";
 
@@ -11,6 +11,14 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  useEffect(() => {
+      const init_login = () =>{
+        setIsLoggedIn(false);
+        setUsername(null);
+      };
+      
+      init_login();
+  }, []);
 
   const handelLogin = async () => {
     const response = await fetch("http://localhost:8050/user/login", {
@@ -41,7 +49,7 @@ const Login = () => {
   
   return (
 
- <div className="body-wrapper">
+//  <div className="body-wrapper">
   <div className="container">
     <div className="form-container" style={{ padding: "2rem" }}>
       <h2>로그인</h2>
@@ -78,7 +86,7 @@ const Login = () => {
     회원가입</Link>
           </p>
   </div>
-</div>
+// </div>
   );
 };
 

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import './Update.css';
 
 const Update = () => {
     const [searchParams] = useSearchParams();
     const boardId = searchParams.get("boardId");
     const nowpage = searchParams.get("nowpage") || 1;
     const navigate = useNavigate();
+    
 
     const [form, setForm] = useState({
         title: "",
@@ -53,7 +55,7 @@ const Update = () => {
             const result = await res.text();
             if (result === "success") {
                 alert("글 수정 완료!");
-                navigate(`/?nowpage=${nowpage}`);
+                navigate(`/board?nowpage=${nowpage}`);
             } else {
                 alert("수정 실패: " + result);
             }
@@ -63,9 +65,10 @@ const Update = () => {
     };
 
     return (
-        <div className="container mt-5">
+        <div className="update-container">
             <h1 className="text-center">글 수정</h1>
-            <form onSubmit={handleSubmit} className="col-md-8 offset-md-2">
+            <br/>
+            <form onSubmit={handleSubmit} className="update-form">
                 <div className="form-group">
                     <label>제목</label>
                     <input
@@ -100,7 +103,7 @@ const Update = () => {
                         required
                     />
                 </div>
-
+                <br/>
                 <div className="d-flex justify-content-between">
                     <button className="btn btn-primary" type="submit">
                         수정 완료
@@ -112,6 +115,7 @@ const Update = () => {
                     >
                         취소
                     </button>
+                    <br/>
                 </div>
             </form>
         </div>

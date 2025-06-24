@@ -1,123 +1,258 @@
-/* 전체 박스 느낌 */
-.view-container {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 0;
-  background-color: white;
-  max-width: 1000px;
-  width : 90% ;
-  height : 1500px;
-  margin : 0 auto;
-}
-
 /* 헤더 타이틀 영역 */
 h1.text-center {
-  margin: 0;
-  background-color: #5972e4;
-  color: white;
-  padding: 14px;
-  font-size: 1.4rem !important;
+  margin-bottom: 3px;
+  color: rgba(0, 0, 0, 0.815) !important;
+  text-align: left !important;
+  padding: 14px 14px 8px 30px;
+  font-size: 2.3rem;
   font-weight: bold;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2.3px solid rgba(0, 0, 0, 0.349);
 }
 
-/* 각 줄 (제목, 작성자 등) */
-.form-group {
-  display: flex;
-  border-bottom: 1px solid #ddd;
-  margin: 0;
+/* 제목 + 작성자 + 조회수 묶음 */
+.meta-group {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-/* 왼쪽 라벨 */
-.form-group label {
-  width: 120px;
-  background-color: #d4dffc38;
-  text-align: center;
-  padding: 12px;
-  margin: 0;
-  border-right: 1px solid #ddd;
+/* 제목 */
+.meta-title-row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin-bottom: 12px;
 }
-
-label {
-    font-size: 1.1rem !important;
-    font-weight: 500 !important;
+.meta-title-row label {
+  width: 100px;
+  font-weight: 500;
+  padding: 10px;
+  border-right: 4px solid #6b70b3;
+  text-align: center;
+  font-size: 1.1rem;
 }
-
-/* 오른쪽 값 */
-.form-group .form-control {
+.meta-title {
+  padding: 10px 16px 20px 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
   flex: 1;
-  padding: 12px 16px;
-  background-color: white;
+  background: transparent;
   border: none;
-  color: #333;
-  white-space: pre-wrap;
-  min-height: auto;
-  margin: 0;
+  color: #111;
+  text-align: left;
 }
 
-/* 내용은 높이 고정 + 스크롤 */
+/* 작성자 + 조회수 줄 */
+.meta-bottom-row {
+  display: flex;
+  justify-content: space-between;
+}
+.meta-writer, .meta-hit, .meta-day {
+  display: flex;
+  align-items: center;
+}
+.meta-writer label,
+.meta-hit label,
+.meta-day label {
+  width: 100px;
+  font-weight: 500;
+  padding: 10px;
+  border-right: 4px solid #6b70b3;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.meta-hit label {
+  margin-left: 250px;
+}
+
+.meta-writer-name,
+.meta-hit-count {
+  padding: 10px 16px 20px 16px;
+  background: transparent;
+  color: #333;
+  border: none;
+  min-height: 1rem;
+  font-size: 1.1rem;
+}
+
+.meta-write-day {
+  padding: 10px 16px 20px 16px;
+  background: transparent;
+  color: #3333339a;
+  border: none;
+  min-height: 1rem;
+  font-size: 1.1rem;
+}
+
+/* 북마크 버튼 */
+button.bookmark {
+  background: none;
+  border: none;
+  padding-left: 10px;
+  cursor: pointer;
+  width: auto;
+}
+
+/* 내용 박스 (내용은 높이 고정 + 스크롤 + 넓게 + 테두리 제거) */
 .form-group .form-control.container.mt-4 {
-  height: 200px;
+  height: 250px;
   overflow-y: auto;
   background-color: #fff;
   box-shadow: none !important;
+  border: none; /* border 없앰 */
+  margin: 0 !important; /* 오른쪽 여백 제거 */
+  width: 100%; /* 가로 최대 넓이 */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 /* 버튼 정렬 영역 */
-.d-flex.justify-content-between.mb-4 {
-  justify-content: center;
-  gap: 10px;
-  padding: 20px;
-  border-top: 1px solid #ccc;
+.publish-area {
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  gap: 12px;                 /* 버튼 간 간격 */
 }
 
-.d-flex > button {
-    flex: 0 0 auto !important;
-    margin: 5px !important;
-}
-
-/* 공통 버튼 스타일 */
-button.btn-smaller {
+.publish {
+  width: 70px;
+  height: 50px;
   padding: 8px 16px;
   font-size: 1rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   color: white;
+  margin-right: 10px;
+}
+.publish-area .edit {
+  background-color: #4271c7;
+}
+.publish-area .delete {
+  background-color: #a6b6c9ab;
+}
+
+.back-list {
+  width: 150px;
+  height: 50px;
+  margin-top: 10px;
+  background: #fff;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
+  padding: 0;
 }
-
-/* 각각 색상 주기 */
-button.btn-smaller.btn-primary:nth-child(1) {
-  background-color: #4c7aaf; /* 수정 */
-  width: 70px;
-  height: 50px;
+.back-list:hover {
+  background: #1976d2;
+  color: #fff;
+  border-color: #1565c0;
 }
-button.btn-smaller.btn-primary:nth-child(2) {
-  background-color: #a6b6c9ab; /* 삭제 - 목록이랑 색깔 연동됨 ㅠ*/
-  width: 70px;
-  height: 50px;
+.view-comment-title {
+  border-top: 3px solid rgb(66, 66, 121);
+  padding: 20px 0 10px 0;
+  margin: 0 !important;
 }
-
-button.btn-smaller.btn-success {
-    background-color: #4271c7;
-}
-
-/* 댓글 부분 유지 */
+/* 댓글 영역 */
 .comments-section {
-  margin-top: 30px;
-  border-top: 2px solid #ccc;
+  margin: 0 0 80px 0;
   padding-top: 20px;
 }
 
-.comment-item {
-  border: 1px solid #ddd;
-  background-color: #fdfdfd;
-  border-radius: 4px;
-  padding: 15px;
+.comment-list-title {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+  color: #555;
+  border-bottom: 3px solid rgb(66, 66, 121);
+  padding: 20px 0 10px 0;
   margin-bottom: 15px;
 }
+.comment-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+  padding: 15px;
+  gap: 20px;
+}
+
+/* 작성자 칸 */
+.comment-meta {
+  flex: 0 0 120px; /* 고정 너비로 설정: 늘어나지 않음 */
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+  word-break: break-all;
+  font-size: 1.02rem;
+}
+
+/* 댓글 내용 */
+.content-box {
+  flex: 1; /* 남는 공간 다 차지함 */
+  text-align: left;
+  word-break: break-word;
+  padding: 0 60px;
+}
+
+/* 시간 */
+.comment-time {
+  flex: 0 0 100px; /* 고정 너비 */
+  text-align: right;
+  color: #7a8ca1;
+  font-size: 0.9rem;
+  white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+.content-button-box {
+  width: 180px;
+}
+.comment-button {
+  width: 70px;
+  height: 50px;
+  margin: 0 8px;
+  border-radius: 5px;
+  background-color: #4271c7;
+  padding: 0;
+  font-weight: 500;
+  color: white;
+  border: none;
+}
+.comment-edit-box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px
+}
+
+.comment-update,
+.comment-update-cancel {
+  width: 70px;
+  height: 50px;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.add-comment-area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button.add-comment {
+  background-color: #4271c7;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  padding: 0 16px;
+}
+button.add-comment:hover {
+  background-color: #c9d7ff;
+  color: #000;
+}
+

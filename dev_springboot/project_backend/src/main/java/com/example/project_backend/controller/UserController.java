@@ -57,28 +57,41 @@ public class UserController {
 
     }
 
+    @PostMapping("/update")
+    public ResponseEntity<Map<String, String>> updateFn(@RequestBody SignUpDto dto) {
+        ResultDto result = memberService.signup(dto);
+
+        if (result.isSuccess()) {
+
+            return ResponseEntity.ok(Map.of("message", result.getMessage()));
+        } else {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(Map.of("message", result.getMessage())); // code: 409
+        }
+
+    }
+
     @PostMapping("/sign-up/name-check")
-    public ResponseEntity<String> nameCheck(@RequestBody String username) {
+    public ResponseEntity<Map<String, String>> nameCheck(@RequestBody String username) {
 
         boolean result = memberService.nameck(username);
-
+        System.out.println(username);
         if (result) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("이미 존재하는 이름");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(Map.of("message", "이미 존재하는 이름"));
         } else {
-            return ResponseEntity.ok("사용가능한 이름");
+            return ResponseEntity.ok(Map.of("message", "사용가능한 이름"));
         }
 
     }
 
     @PostMapping("/sign-up/email-check")
-    public ResponseEntity<String> emailCheck(@RequestBody String email) {
+    public ResponseEntity<Map<String, String>> emailCheck(@RequestBody String email) {
 
         boolean result = memberService.emailck(email);
 
         if (result) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("이미 존재하는 메일");
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(Map.of("message", "이미 존재하는 메일"));
         } else {
-            return ResponseEntity.ok("사용가능한 메일");
+            return ResponseEntity.ok(Map.of("message", "사용가능한 메일"));
         }
 
     }
@@ -87,9 +100,11 @@ public class UserController {
     public ResponseEntity<?> getSession(HttpSession session) {
 
         Object user = session.getAttribute("user");
+        Object uid = memberService.getuid(user);
+        memberService.getuid(user);
 
         if (user != null) {
-            return ResponseEntity.ok(Map.of("username", user));
+            return ResponseEntity.ok(Map.of("username", user, "uid", uid));
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("로그인 필요");
         }
