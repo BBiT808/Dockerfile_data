@@ -32,6 +32,7 @@ const Home = () => {
               <li>🎂 <strong>생일:</strong> 1997년 10월 31일</li>
               <li>🏡 <strong>거주지:</strong> 부산광역시 북구</li>
               <li>🔗 <strong>Github:</strong> <a href="https://github.com/BBiT808">https://github.com/BBiT808</a></li>
+              <li>📬 <strong>E-mail:</strong> <a href="mailto:pinokio1031@naver.com">pinokio1031@naver.com</a></li>
             </ul>
           </div>
         </div>
@@ -121,14 +122,6 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="contact" className="content">
-        <h1>📞 Contact 📞</h1>
-        <div className="contact-box">
-          <strong>봐 주셔서 감사합니다!</strong>
-          <p><strong>📬 E-mail</strong></p>
-          <p><a href="mailto:pinokio1031@naver.com">pinokio1031@naver.com</a></p>
-        </div>
-      </section>
     </div>
   )
 }
