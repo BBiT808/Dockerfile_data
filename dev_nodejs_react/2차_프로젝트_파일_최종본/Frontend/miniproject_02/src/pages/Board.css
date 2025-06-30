@@ -1,0 +1,376 @@
+.board-main-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.board-section {
+    overflow: visible;
+    min-width: 1000px;
+    max-width: 1400px;
+    width: 95%;
+    position: relative;
+    padding: 0 0 48px 0;
+    box-sizing: border-box;
+}
+
+.board-title{
+  margin-bottom: 3px;
+  color: rgba(0, 0, 0, 0.815) !important;
+  text-align: left !important;
+  padding: 14px 14px 8px 30px;
+  font-size: 2.3rem;
+  font-weight: bold;
+  border-bottom: 2.3px solid rgba(0, 0, 0, 0.349);
+}
+
+.board-header {
+     display: flex;              /* flex로 정렬 */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.board-search-box {
+    margin: 0; /* margin 제거 */
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.board-search-select {
+    padding: 10px 12px;
+    border: 1.5px solid #b6d0f7;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+    background: #f9fafb;
+    color: #222;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 340px;
+}
+
+.board-search-select:focus {
+    border: 1.5px solid #1976d2;
+    background: #fff;
+}
+
+.board-search-input {
+    padding: 10px 16px;
+    border: 1.5px solid #b6d0f7;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+    background: #f9fafb;
+    color: #222;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.board-search-input:focus {
+    border: 1.5px solid #1976d2;
+    background: #fff;
+}
+
+.board-search-btn {
+    background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+    color: #fff;
+    width: 150px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    outline: none;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.board-search-btn:hover {
+    background: linear-gradient(90deg, #1565c0 60%, #64b5f6 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(25, 118, 210, 0.13);
+}
+
+.btn.btn-all {
+    background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+    width: 160px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    outline: none;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn.btn-all:hover {
+    background: linear-gradient(90deg, #1565c0 60%, #64b5f6 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(25, 118, 210, 0.13);
+}
+
+.board-table-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px; /* 더 넓게! */
+    margin: 0 auto;
+}
+
+.board-table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    border-spacing: 0 8px;
+    background: transparent;
+}
+
+.board-table th,
+.board-table td {
+    border: none; /* 세로줄 제거 */
+    padding: 1rem 0.7rem;
+    color: #333;
+    font-size: 1.05rem !important;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.board-table td {
+    border-bottom: 2px solid #9eb9e4; /* 부드러운 회색 선 추가 */
+}
+
+.writer-cell {
+    padding-left: 9rem !important;
+    color: #748aad !important;
+}
+
+/* 마우스 오버시 셀 색상 변경 */
+.board-table tbody > tr:hover {
+    background-color: #e3f2fd; /* 연한 하늘색 */
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+    background: #f0f8ff;
+    
+}
+
+/* 제목 셀은 왼쪽 정렬 */
+.board-table .table-title {
+    text-align: left;
+    padding-left: 50px;
+}
+
+.table-num {
+    text-align: center !important;
+    vertical-align: middle;
+}
+
+/* 게시판 제목 설정 */
+.board-table th {
+     font-weight: 800; /* 더 진하게 */
+    color: #0e3d75;
+    text-align: center;
+    font-size: 1.2rem !important;
+    border-bottom: 2px solid #6480aa;
+}
+
+.board-table tr:nth-child(1) {
+    border-top: 3px solid #1565c0;
+}
+
+.board-table .table-title {
+    text-align: left;
+    color: #1a4d80;
+    font-weight: bold;
+    transition: background 0.2s;
+    font-size: 1.05rem !important;
+}
+
+.board-table .table-title a {
+    color: #1a4d80;
+    text-decoration: none;
+    transition: text-decoration 0.2s, color 0.2s;
+    font-size: 1.05rem !important;
+}
+
+.board-table .table-title a:hover {
+    text-decoration: underline;
+    color: #f7c478;
+}
+
+/* 페이지네이션 스타일 */
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    margin: 24px 0;
+    flex-wrap: wrap;
+}
+
+.pagination-btn {
+    width: 50px;
+    padding: 8px 16px;
+    border: 1px solid #b6d0f7;
+    background: #fff;
+    color: #1976d2;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.pagination-btn:hover {
+    background: #f0f8ff;
+    border-color: #1976d2;
+}
+
+.pagination-btn.active {
+    background: #1976d2;
+    color: #fff;
+    border-color: #1976d2;
+    font-weight: 700;
+}
+
+.board-footer {
+    margin-top: 32px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn.write-post {
+    margin-left: 150px;
+    align-self: flex-start;
+    width: 150px !important;
+    height: 44px !important;
+    background: #fff;
+    color: #1976d2;
+    border: 2px solid #1976d2;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.btn.btn-outline-primary:hover {
+    background: #1976d2;
+    color: #fff;
+    border: 2px solid #1565c0;
+}
+
+.table-view {
+    text-align: center !important
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+    .board-section {
+        min-width: unset;
+        max-width: 98vw;
+        padding: 32px 24px;
+    }
+
+    .board-header {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1100px) {
+    .board-section {
+        min-width: unset;
+        max-width: 98vw;
+        padding: 18px 2vw;
+    }
+
+    .board-table {
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .board-section {
+        padding: 8px 2vw;
+        margin: 20px 0 100px 0;
+    }
+
+    .board-header {
+        justify-content: center;
+    }
+
+    .board-search-box {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .board-search-input {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .board-search-select {
+        width: 100%;
+    }
+
+    .board-search-btn {
+        width: 100%;
+    }
+
+    .board-table th,
+    .board-table td {
+        padding: 0.5rem 0.2rem;
+        font-size: 0.95rem;
+    }
+
+    .board-footer {
+        margin-top: 18px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn.btn-outline-primary {
+        width: 100%;
+    }
+
+    .btn.btn-all {
+        width: 100%;
+    }
+
+    .pagination {
+        gap: 4px;
+    }
+
+    .pagination-btn {
+        padding: 6px 12px;
+        min-width: 35px;
+        font-size: 0.9rem;
+    }
+
+    
+}

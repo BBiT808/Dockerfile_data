@@ -1,0 +1,549 @@
+/* 마이페이지 레이아웃 */
+.mypage-layout {
+    display: flex;
+    gap: 48px;
+    min-height: 340px;
+}
+
+.Mypage-title {
+  margin-bottom: 3px;
+  color: rgba(0, 0, 0, 0.815) !important;
+  text-align: left !important;
+  padding: 14px 14px 8px 30px;
+  font-size: 2.3rem;
+  font-weight: bold;
+  border-bottom: 2.3px solid rgba(0, 0, 0, 0.349);
+}
+
+
+/* 왼쪽 메뉴 */
+.mypage-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    min-width: 250px;
+    background: rgba(25, 118, 210, 0.07);
+    border-radius: 16px;
+    padding: 130px 18px;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.07);
+    align-items: stretch;
+    position: relative;
+}
+
+.mypage-menu button {
+    background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    outline: none;
+    letter-spacing: 0.01em;
+}
+
+.mypage-menu button:hover {
+    background: linear-gradient(90deg, #1565c0 60%, #64b5f6 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(25, 118, 210, 0.13);
+}
+
+/* 오른쪽 내용 영역 */
+.mypage-content {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    min-height: 850px;
+    padding: 40px 32px;
+    /* box-shadow: 0 2px 12px rgba(25, 118, 210, 0.06); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    color: #222;
+    position: relative;
+    /* transition: box-shadow 0.2s; */
+    overflow-y: auto;
+}
+
+.mypage-section>h2 {
+    margin-bottom: 32px;
+    color: #1976d2;
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+
+/* 프로필 영역 */
+.mypage-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+    gap: 10px;
+}
+
+.fake-button {
+  color: #333;
+  font-size: 1.2rem !important;
+  cursor: pointer;
+}
+
+.fake-button.active {
+  color: #76d7f0 !important;
+}
+
+.fake-button:hover {
+  text-decoration: underline;
+}
+
+.sub-tab-banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 3px solid #1976d2;
+}
+
+.sub-tab {
+  padding: 6px 10px;
+  border: none;
+  /* background-color: transparent; */
+  color: #1976d2;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.sub-tab:hover {
+  background-color: #e3ecff;
+}
+.sub-tab.active {
+  /* background-color: #1976d2; */
+  color: white;
+  /* border-radius: 5px; */
+}
+
+.mypage-profile-img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1976d2;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.13);
+}
+
+.mypage-profile-id {
+    font-size: 1.12rem;
+    color: #1976d2;
+    font-weight: 700;
+    margin-top: 2px;
+    letter-spacing: 0.01em;
+}
+
+/* 계정 드롭다운 */
+.mypage-account-dropdown {
+    position: relative;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.mypage-account-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 0;
+    font-size: 1.12rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(25, 118, 210, 0.10);
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    outline: none;
+    letter-spacing: 0.01em;
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.mypage-account-btn:hover,
+.mypage-account-dropdown:hover .mypage-account-btn {
+    background: linear-gradient(90deg, #1565c0 60%, #64b5f6 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(25, 118, 210, 0.16);
+}
+
+.mypage-account-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 110%;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(25, 118, 210, 0.13);
+    padding: 0.5rem 0;
+    z-index: 10;
+    animation: fadeIn 0.2s;
+}
+
+.mypage-account-dropdown:hover .mypage-account-menu {
+    display: block;
+}
+
+.mypage-account-menu button {
+    width: 100%;
+    background: none;
+    color: #1976d2;
+    border: none;
+    border-radius: 0;
+    padding: 14px 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    text-align: left;
+    padding-left: 18px;
+}
+
+.mypage-account-menu button:hover {
+    background: #e3f0ff;
+    color: #1565c0;
+}
+
+.mypage-account-menu-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, box-shadow 0.2s;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(25, 118, 210, 0.10);
+    outline: none;
+    letter-spacing: 0.01em;
+    margin: 0;
+}
+
+.mypage-account-menu-btn:hover {
+    background: linear-gradient(90deg, #1565c0 60%, #64b5f6 100%);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(25, 118, 210, 0.13);
+}
+
+input {
+    color: gray;
+}
+
+.changeAllow {
+    color: black;
+}
+
+
+.btn-save:disabled {
+  background-color: #ccc;    
+  color: #666;               
+  cursor: not-allowed;        
+  opacity: 0.7; 
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 회원 정보 수정 폼 */
+.mypage-edit-box {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+/* .mypage-edit-bot > label {
+
+} */
+.mypage-edit-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-align: center;
+    color: #414f79;
+}
+
+.mypage-edit-form-simple {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.mypage-edit-form-simple label {
+    font-size: 1.02rem;
+    color: #444;
+    margin-bottom: 2px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mypage-edit-form-simple input {
+    height: 38px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 0 12px;
+    font-size: 1.08rem;
+    background: #f8fafc;
+    transition: border 0.2s;
+}
+
+.mypage-edit-form-simple input:focus {
+    border: 1.5px solid #1976d2;
+    outline: none;
+    background: #fff;
+}
+
+.mypage-edit-form-simple input.readonly {
+    background: #e9ecef;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.mypage-edit-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    height: 60px;
+}
+
+/* .btn-save,
+.btn-cancel {
+    width: 150px !important;
+} */
+
+.btn-save {
+    flex: 1;
+    background: #4f7cff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0 !important;
+    cursor: pointer;
+    transition: background 0.18s;
+}
+
+.btn-save:hover {
+    background: #2d5be3;
+}
+
+.btn-cancel {
+    flex: 1;
+    background: #757d85;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600 !important;
+    cursor: pointer;
+    transition: background 0.18s;
+}
+
+.btn-cancel:hover {
+    background: #5a6268;
+}
+
+@media (max-width: 700px) {
+    .mypage-container {
+        padding: 18px 4vw;
+    }
+
+    .mypage-layout {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .mypage-menu {
+        flex-direction: row;
+        gap: 10px;
+        min-width: unset;
+        padding: 12px 6px;
+        justify-content: center;
+    }
+
+    .mypage-content {
+        padding: 18px 8px;
+        min-height: 120px;
+    }
+}
+
+.stylish-title {
+   font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-align: center;
+    color: #414f79;
+}
+
+.stylish-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.stylish-tab {
+    flex: 1;
+    background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+    transition: background 0.18s, color 0.18s;
+    opacity: 1;
+}
+
+.stylish-tab.active,
+.stylish-tab.inactive {
+    background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+    color: #fff;
+    opacity: 1;
+}
+
+.stylish-tab.inactive {
+    filter: grayscale(0.25) brightness(0.92);
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.stylish-search {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.stylish-select {
+    border-radius: 8px;
+    border: 1.5px solid #b3c6e6;
+    padding: 8px 12px;
+    font-size: 1.05rem;
+    background: #f8faff;
+    color: #1976d2;
+    font-weight: 600;
+    outline: none;
+    transition: border 0.18s;
+}
+
+.stylish-select:focus {
+    border: 1.5px solid #1976d2;
+}
+
+.stylish-searchbox {
+    display: flex;
+    flex: 1;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+    background: #fff;
+}
+
+.stylish-input {
+    flex: 1;
+    border: none;
+    padding: 10px 14px;
+    font-size: 1.08rem;
+    background: transparent;
+    outline: none;
+    color: #1976d2;
+}
+
+.stylish-searchbtn {
+    background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+    color: #fff;
+    border: none;
+    height: 40px;
+    font-weight: 700;
+    font-size: 1.08rem;
+    padding: 0 22px;
+    cursor: pointer;
+    transition: background 0.18s;
+    border-radius: 8px 8px 0 0;
+}
+
+.stylish-searchbtn:hover {
+    background: linear-gradient(90deg, #1565c0 60%, #64b5f6 100%);
+}
+
+.stylish-empty-list {
+    text-align: center;
+    color: #b0b8c1;
+    font-size: 1.13rem;
+    padding: 38px 0 10px 0;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+}
+
+.bookmark-card {
+ background-color: white;
+ border-radius: 10px;
+ box-shadow: 1px 1px 3px 0px #ccc;
+ margin-bottom: 30px;
+ padding: 0px 20px 20px 20px;
+ text-align: left;
+ width: 760px;
+}
+
+.bookmark-title {
+  margin : 0px -20px 20px -20px; 
+  border-radius: 10px 10px 0 0 ;
+  background-color: #64b4f693;
+  color: rgba(0, 0, 0, 0.815) !important;
+  text-align: left !important;
+  padding: 14px 14px 8px 20px;
+  /* font-size: 2.3rem; */
+  font-weight: bold;
+  border-bottom: 2.3px solid rgb(66, 141, 226);
+}
+
+.bookmark-content {
+    color: #2b4458ec;
+    margin-bottom: 10px;
+}
+
+.bookmark-meta {
+    font-size: 1.08rem ;
+    color: #325b7cc2;
+}
+
+
