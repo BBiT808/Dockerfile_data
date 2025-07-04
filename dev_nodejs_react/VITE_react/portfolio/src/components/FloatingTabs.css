@@ -1,0 +1,41 @@
+.floating-tabs {
+  position: fixed;
+  top: -80px; /* 초반엔 위에 숨겨놓고 */
+  left: 0;
+  width: 100%; /* 💡 화면 가로 전체 너비 */
+  background-color: #ffffffcc; /* 약간 투명한 흰색 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  backdrop-filter: blur(10px); /* 배경 블러 처리로 깔끔하게! */
+   transition: top 0.5s ease;
+}
+
+.floating-tabs.visible {
+  top: 0.5px; /* 반쯤 스크롤되면 나타나~! */
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.tab:hover {
+  background-color: #d9f0ff;
+}
+
+.tab.active {
+  background-color: #a3d5ff;
+  color: #003049;
+}

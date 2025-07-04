@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Link, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
+import FloatingTabs from './components/FloatingTabs';
 
 function App() {
   const [activeTab, setActiveTab] = useState('about');
@@ -16,37 +17,15 @@ function App() {
 
   return (
     <>
-      {/* 네비게이션 탭 */}
-        <button 
-  className={`floating-tab ${activeTab === 'about' ? 'active' : ''}`}
-  onClick={() => scrollToSection('about', 'about')}
->
-  About
-</button>
-<button 
-  className={`floating-tab ${activeTab === 'technology' ? 'active' : ''}`}
-  onClick={() => scrollToSection('technology', 'technology')}
->
-  Technology
-</button>
-<button 
-  className={`floating-tab ${activeTab === 'products' ? 'active' : ''}`}
-  onClick={() => scrollToSection('products', 'products')}
->
-  Products
-</button>
-<button 
-  className={`floating-tab ${activeTab === 'contact' ? 'active' : ''}`}
-  onClick={() => scrollToSection('contact', 'contact')}
->
-  Contact
-</button>
+      {/* 항상 떠있는 탭 */}
+      <FloatingTabs scrollToSection={scrollToSection} activeTab={activeTab} />
 
+      {/* 라우터 구성 */}
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

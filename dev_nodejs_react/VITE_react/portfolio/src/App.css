@@ -1,7 +1,7 @@
 #root {
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -95,9 +95,9 @@
   top: 50%;
 }
 
-.floating-tab:nth-child(4) {
+/* .floating-tab:nth-child(4) {
   top: 65%;
-}
+} */
 
 /* 아이콘 추가 (선택사항) */
 .floating-tab::before {
@@ -128,9 +128,9 @@
   content: '📦';
 }
 
-.floating-tab:nth-child(4)::before {
+/* .floating-tab:nth-child(4)::before {
   content: '📞';
-}
+} */
 
 /* 전체 스크롤바 스타일 */
 ::-webkit-scrollbar {
