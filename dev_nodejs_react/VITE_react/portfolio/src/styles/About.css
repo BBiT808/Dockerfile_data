@@ -9,7 +9,7 @@
   background: #d29edf;
   color: white;
   padding: 4rem 2rem;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
 }
 .about-section > .section-title {
   font-size: 3rem;

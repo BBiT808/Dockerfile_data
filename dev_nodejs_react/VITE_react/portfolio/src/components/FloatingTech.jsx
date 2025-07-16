@@ -106,7 +106,8 @@ const FloatingTech = () => {
   return (
 <section id = "tech" section className="tech-section">
   <h2 className="section-title">Skills</h2>
-
+ <br />
+ <br />
   {Object.entries(techData).map(([category, techList]) => (
     <div key={category} className="tech-category-box">
       <h3 className="category-title">{category}</h3>

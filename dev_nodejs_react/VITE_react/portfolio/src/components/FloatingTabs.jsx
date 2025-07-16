@@ -23,8 +23,9 @@ window.addEventListener('scroll', handleScroll); // 이게 빠졌었어!
   return (
     <div className={`floating-tabs ${showTabs ? 'visible' : ''}`}>
       <button onClick={() => scrollToSection('about')} className="tab">About</button>
-      <button onClick={() => scrollToSection('tech')} className="tab">Tech</button>
+      <button onClick={() => scrollToSection('tech')} className="tab">Skills</button>
       <button onClick={() => scrollToSection('projects')} className="tab">Projects</button>
+      <button onClick={() => scrollToSection('contact')} className="tab">Contact</button>
     </div>
   );
 };

@@ -13,8 +13,12 @@
 }
 
 .floating-tabs.visible {
-  color: #fff;
-  background-color: #e4a0f5; /* 원하는 보라색 💜 */
+  background-color: #ffffffa4;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.floating-tabs.visible .tab{
+    color: #c25fc5;
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
 }
 
