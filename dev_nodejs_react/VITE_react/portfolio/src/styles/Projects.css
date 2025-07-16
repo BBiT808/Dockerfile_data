@@ -1,0 +1,86 @@
+.projects-section {
+  padding: 100px 20px;
+  background: white;
+  text-align: center;
+}
+
+.projects-section > .section-title {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #b756c0;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-description {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.project-description h3 {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.project-description p {
+  color: #444;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-links a {
+  margin-right: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn-outline {
+  display: inline-block;
+  position: relative;
+  padding: 0.75em 1.5em;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 2px solid #c38fff;
+  color: #c163ec;
+  background: linear-gradient(to right, #c38fff 0%, #c38fff 100%);
+  background-position: left;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease, color 0.4s ease;
+}
+
+.btn-outline:hover {
+  background-size: 100% 100%;
+  color: white;
+}
+
+.btn-plain {
+  color: #c163ec;
+  font-weight: bold;
+}
+.project-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.project-image img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}

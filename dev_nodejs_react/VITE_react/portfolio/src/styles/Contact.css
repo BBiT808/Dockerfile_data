@@ -1,0 +1,68 @@
+.contact-section {
+  min-height: 100vh;
+  background: #d29edf;
+   min-height: 100vh;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.contact-section p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  position: relative;
+  padding: 0.75em 1.5em;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 2px solid #eab5f1;
+  color: #b66bc0;
+  background: linear-gradient(to right, #eab5f1 0%, #eab5f1 100%);
+  background-position: left;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease, color 0.4s ease;
+}
+
+.contact-btn:hover {
+  background-size: 100% 100%;
+  color: white;
+}
+
+.contact-btn--hero a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease-out forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,6 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .floating-tabs {
   position: fixed;
-  top: -80px; /* 초반엔 위에 숨겨놓고 */
+  top: -85px; /* 초반엔 위에 숨겨놓고 */
   left: 0;
   width: 100%; /* 💡 화면 가로 전체 너비 */
   background-color: #ffffffcc; /* 약간 투명한 흰색 */
@@ -16,7 +20,7 @@
 }
 
 .floating-tabs.visible {
-  top: 0.5px; /* 반쯤 스크롤되면 나타나~! */
+  top: 0.3px; /* 반쯤 스크롤되면 나타나~! */
 }
 
 .tab {

@@ -1,15 +1,19 @@
 import { useEffect, useState } from 'react';
-import '../styles/FloatingTabs.css';
+import './FloatingTabs.css';
 
 const FloatingTabs = () => {
   const [showTabs, setShowTabs] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-  const threshold = 100; // 예: 100px 이상 내려가면 보이게
-  setShowTabs(window.scrollY > threshold);
-};
-window.addEventListener('scroll', handleScroll); // 이게 빠졌었어!
+      const about1 = document.getElementById('about1');
+      if (about1) {
+        const scrollThreshold = about1.offsetTop + about1.offsetHeight / 2;
+        setShowTabs(window.scrollY > scrollThreshold);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -22,8 +26,8 @@ window.addEventListener('scroll', handleScroll); // 이게 빠졌었어!
 
   return (
     <div className={`floating-tabs ${showTabs ? 'visible' : ''}`}>
-      <button onClick={() => scrollToSection('about')} className="tab">About</button>
-      <button onClick={() => scrollToSection('tech')} className="tab">Tech</button>
+      <button onClick={() => scrollToSection('about2')} className="tab">About</button>
+      <button onClick={() => scrollToSection('technology')} className="tab">Tech</button>
       <button onClick={() => scrollToSection('projects')} className="tab">Projects</button>
     </div>
   );

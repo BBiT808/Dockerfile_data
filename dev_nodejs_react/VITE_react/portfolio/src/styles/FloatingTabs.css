@@ -1,0 +1,37 @@
+.floating-tabs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  z-index: 999;
+  background-color: transparent;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.floating-tabs.visible {
+  color: #fff;
+  background-color: #e4a0f5; /* 원하는 보라색 💜 */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.tab {
+  font-weight: bold;
+  /* color: #a26aad; */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  all: unset; /* 버튼의 모든 기본 스타일 제거 */
+  cursor: pointer; /* 클릭 가능한 손 모양 커서는 유지 */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(249, 238, 255);
+  padding: 0.5rem 1rem;
+}
+
+.tab:hover {
+  background-color: #a26aad;
+  color: white;
+}

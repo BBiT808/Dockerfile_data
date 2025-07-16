@@ -1,31 +1,26 @@
-import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import './App.css'
-import Home from './pages/Home'
+import React from 'react';
+import './styles/main.css';
+
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import FloatingTech from './components/FloatingTech';
 import FloatingTabs from './components/FloatingTabs';
 
-function App() {
-  const [activeTab, setActiveTab] = useState('about');
-
-  const scrollToSection = (sectionId, tabName) => {
-    setActiveTab(tabName);
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+const App = () => {
   return (
     <>
-      {/* 항상 떠있는 탭 */}
-      <FloatingTabs scrollToSection={scrollToSection} activeTab={activeTab} />
-
-      {/* 라우터 구성 */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <FloatingTabs/>
+      <Hero />
+      <About />
+      <FloatingTech />
+      <Projects />
+      <Contact />
+      <Footer />
     </>
   );
-}
+};
 
 export default App;
