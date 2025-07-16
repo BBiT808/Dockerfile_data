@@ -28,7 +28,7 @@ useEffect(() => {
           </div>
         </div>
         <div className="project-image">
-          <img src="/images/book.png" alt="프로젝트 이미지" />
+          <img src="/Dockerfile_data/images/book.png" alt="프로젝트 이미지" />
         </div>
       </div>
       <br />
@@ -44,7 +44,7 @@ useEffect(() => {
           </div>
         </div>
         <div className="project-image">
-          <img src="/images/web.png" alt="프로젝트 이미지" />
+          <img src="/Dockerfile_data/images/web.png" alt="프로젝트 이미지" />
         </div>
       </div>
       <br />
@@ -60,7 +60,7 @@ useEffect(() => {
           </div>
         </div>
         <div className="project-image">
-          <img src="/images/github.png" alt="프로젝트 이미지" />
+          <img src="/Dockerfile_data/images/github.png" alt="프로젝트 이미지" />
         </div>
       </div>
       <br />
@@ -76,7 +76,7 @@ useEffect(() => {
           </div>
         </div>
         <div className="project-image">
-          <img src="/images/html.png" alt="프로젝트 이미지" />
+          <img src="/Dockerfile_data/images/html.png" alt="프로젝트 이미지" />
         </div>
       </div>
     </section>
