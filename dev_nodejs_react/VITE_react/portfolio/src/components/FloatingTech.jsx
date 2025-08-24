@@ -42,7 +42,6 @@ const techData = {
       icon: <SiOracle size={32} color="#f80000" />,
       description: (
         <>
-        ･ 기본적인 CRUD 쿼리 이해<br />
         ･ DB 설치 및 기본 SQL 작성 가능<br />
         ･ PK와 FK로 구분되는 Key 속성을<br />&nbsp;&nbsp;활용하여 SQL 작성 가능<br />
         ･ 데이터베이스 구축 및<br />&nbsp;&nbsp;ERD 형성 가능<br />
