@@ -27,7 +27,7 @@ jobs:
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}  # 이렇게 변경
           publish_dir: ./dev_nodejs_react/VITE_react/portfolio/dist
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          submodules: false  # submodule 무시
+      # - name: Checkout repository
+      #   uses: actions/checkout@v4
+      #   with:
+      #     submodules: false  # submodule 무시
