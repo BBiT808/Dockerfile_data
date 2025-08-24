@@ -71,7 +71,6 @@ const techData = {
         ･ JSX 및 컴포넌트 기반<br />&nbsp;&nbsp;UI 설계 가능<br />
         ･ React Router를 활용한<br />&nbsp;&nbsp;페이지 간 라우팅 구현<br />
         ･ Axios를 이용한 비동기 통신 <br />&nbsp;&nbsp;및 데이터 처리 가능<br />
-        ･ 컴포넌트 재사용 및 <br />&nbsp;&nbsp;props/state 이해 및 활용 가능
         </>
       ),
     },
