@@ -42,8 +42,8 @@ const techData = {
       icon: <SiOracle size={32} color="#f80000" />,
       description: (
         <>
-        ･ DB 설치 /기본 SQL 작성 가능<br />
-        ･ PK/FK의 Key 속성을 활용해 SQL 작성 가능<br />
+        ･ DB 설치/기본 SQL 작성 가능<br />
+        ･ PK/FK의 Key 속성 활용/SQL 작성 가능<br />
         ･ 데이터베이스 구축 및<br />&nbsp;&nbsp;ERD 형성 가능<br />
         ･ 트랜잭션 개념과 처리 <br />&nbsp;&nbsp;방법 이해
         </>
