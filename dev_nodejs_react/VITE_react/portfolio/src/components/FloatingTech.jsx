@@ -42,10 +42,10 @@ const techData = {
       icon: <SiOracle size={32} color="#f80000" />,
       description: (
         <>
-        ･ DB 설치 및 기본 SQL 작성 가능<br />
+        ･ DB 설치 / 기본 SQL 작성 가능<br />
         ･ PK와 FK로 구분되는 Key 속성을<br />&nbsp;&nbsp;활용하여 SQL 작성 가능<br />
         ･ 데이터베이스 구축 및<br />&nbsp;&nbsp;ERD 형성 가능<br />
-        ･ 트랜잭션의 개념과 처리 <br />&nbsp;&nbsp;방법 이해
+        ･ 트랜잭션 개념과 처리 <br />&nbsp;&nbsp;방법 이해
         </>
       ),
     },
@@ -55,9 +55,9 @@ const techData = {
       icon: <SiSpringboot size={32} color="#6db33f" />,
       description: (
         <>
-        ･ 기초 서버 구현 및 웹 틀<br />&nbsp;&nbsp; 구성 가능<br />
+        ･ 기초 서버 구현 / 웹 틀<br />&nbsp;&nbsp; 구성 가능<br />
         ･ 어노테이션 기반 Controller<br />&nbsp;&nbsp;구현 가능<br />
-        ･ Devcontainer를 활용한 <br />&nbsp;&nbsp;Spring Boot 서버 개발 및<br />&nbsp;&nbsp;구현 가능
+        ･ Devcontainer를 활용한 <br />&nbsp;&nbsp;Spring Boot 서버 개발 /<br />&nbsp;&nbsp;구현 가능
         </>
       ),
     },
