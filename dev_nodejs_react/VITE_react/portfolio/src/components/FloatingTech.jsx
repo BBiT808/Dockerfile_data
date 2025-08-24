@@ -70,7 +70,7 @@ const techData = {
         ･ Vite 기반 프로젝트 구성 가능<br />
         ･ JSX 및 컴포넌트 기반<br />&nbsp;&nbsp;UI 설계 가능<br />
         ･ React Router를 활용한<br />&nbsp;&nbsp;페이지 간 라우팅 구현<br />
-        ･ Axios를 이용한 비동기 통신 <br />&nbsp;&nbsp;및 데이터 처리 가능<br />
+        ･ Axios를 이용한 비동기 통신 <br />&nbsp;&nbsp;/ 데이터 처리 가능<br />
         </>
       ),
     },
