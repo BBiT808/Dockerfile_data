@@ -8,26 +8,20 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: ./dev_nodejs_react/VITE_react/portfolio
-
+    # working-directory 제거
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
       - name: Install dependencies
         run: npm install
-
+        working-directory: ./dev_nodejs_react/VITE_react/portfolio
       - name: Build
         run: npm run build
-
+        working-directory: ./dev_nodejs_react/VITE_react/portfolio
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
